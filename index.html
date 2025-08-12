@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- container -->
+    <section class="container">
+        <header>
+            <h1>Hava Durumu</h1>
+
+            <div class="theme-toggle">
+                <button id="theme-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+            <form>
+          <!-- Input -->
+          <input
+            type="search"
+            placeholder="Şehir adı giriniz ..."
+            list="city-list"
+          />
+          <datalist id="city-list">
+            <!-- <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> -->
+
+            <!-- ! Bu kısım js ile dinamik şekilde doldurulacak -->
+          </datalist>
+          <!-- Button -->
+          <button type="submit" id="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        </header>
+
+
+        <!-- weather container -->
+
+        <div class="weather-container">
+
+            <div class="weather-card ">
+                <div class="weather-header">
+                    <div class="location-info">
+                        <h2 id="location">Stockholm,SE</h2>
+                        <div class="country-flag">
+                            <img src="https://flagcdn.com/w80/se.png" alt="flag-image" />
+                        </div>
+                    </div>
+
+                    <p id="date">29 Mayıs 2025 Perşembe</p>
+                </div>
+               
+                <div class="weather-info">
+
+                    <div class="temperature">
+                        <h3 id="temperature">16°C</h3>
+                        <p>Hissedilen <span id="feel-like">15°C</span></p>
+                    </div>
+
+                    <div class="weather-icon">
+                        <img src="https://openweathermap.org/img/wn/02n@2x.png" alt="weather-icon" />
+
+                        <p id="weather-description">kapalı</p>
+                    </div>
+                </div>
+             
+
+                <div class="weather-details">
+                    <div class="details">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <p>Rüzgar Hızı</p>
+                            <p id="wind-speed">1.07 m/s</p>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div>
+                            <p>Nem</p>
+                            <p id="humidity">70 %</p>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <i class="fa-solid fa-minimize"></i>
+                        <div>
+                            <p>Basınç</p>
+                            <p id="pressure">1007 hPa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- error container -->
+
+<div class="error-message" id="error-message">
+    <p>Şehir bulunamadı. Lütfen geçerli bir şehir adı girin.</p>
+</div>
+
+        <!-- loader container -->
+<div class="loader-container" id="loader">
+    <div class="loader"></div>
+</div>
+
+
+    </section>
+
+    <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>
