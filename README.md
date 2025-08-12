@@ -7,6 +7,10 @@ Kullanıcı, şehir adını girerek aşağıdaki bilgileri öğrenebilir:
 🌤 Hava durumu durumu (Açık, Kapalı, Yağmurlu vb.)
 🕒 Güncel tarih ve saat
 Uygulama, kullanıcı dostu bir arayüz ve responsive tasarım ile her cihazda sorunsuz çalışır. SASS kullanılarak tasarım yönetimi kolaylaştırılmış, modern ve sade bir görünüm sağlanmıştır.
+
+
+
+
 🚀 Özellikler
 🌍 Şehir seçimine göre hava durumu bilgisi
 📡 API üzerinden anlık veri çekme
